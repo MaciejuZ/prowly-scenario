@@ -24,3 +24,10 @@ Scenario: Filtering search results for a phrase "Prowly Media Monitoring"
     | mapy       | maps       |
     | wiadomosci | news       |
     | zakupy     | shopping   |
+
+
+Scenario: Filtering search results using a chat
+    Given The user looked up a phrase "Prowly Media Monitoring"
+	And Is on the search results website
+	When Clicks on the name "czat" located under the window with the searched phrase
+	Then A chat window is displayed showing the results found by the AI
